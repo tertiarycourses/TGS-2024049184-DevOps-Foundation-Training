@@ -1,0 +1,5 @@
+"category","event_count","lost_minutes","cumulative_pct"
+"Configuration",3,250,39.5
+"Dependency",3,165,65.6
+"Flaky test",4,163,91.3
+"Manual approval",2,55,100

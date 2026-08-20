@@ -1,0 +1,9 @@
+problem_id,service,status,severity,detected_at,restored_at,owner,repeat_count
+PRB-101,Checkout,Resolved,4,2026-08-05 08:15,2026-08-05 10:05,Aisha,3
+PRB-102,Catalog,Learning,2,2026-08-06 02:10,2026-08-06 03:00,Ben,2
+PRB-103,Payments,Investigating,5,2026-08-12 09:20,,Chen,4
+PRB-104,Search,Logged,3,2026-08-15 11:00,,Devi,2
+PRB-105,Checkout,Resolved,4,2026-08-08 14:20,2026-08-08 18:50,Aisha,5
+PRB-106,Identity,Detected,5,2026-08-19 07:45,,Farid,1
+PRB-107,Catalog,Resolved,2,2026-08-09 03:30,2026-08-09 04:20,Ben,3
+PRB-108,Payments,Investigating,4,2026-08-17 16:10,,Chen,2

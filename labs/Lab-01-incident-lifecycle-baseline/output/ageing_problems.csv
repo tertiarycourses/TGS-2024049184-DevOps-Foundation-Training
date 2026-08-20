@@ -1,0 +1,5 @@
+"problem_id","service","status","severity","owner","repeat_count","ageing_days"
+"PRB-103","Payments","Investigating",5,"Chen",4,7.98611111111111
+"PRB-104","Search","Logged",3,"Devi",2,4.91666666666667
+"PRB-108","Payments","Investigating",4,"Chen",2,2.70138888888889
+"PRB-106","Identity","Detected",5,"Farid",1,1.05208333333333

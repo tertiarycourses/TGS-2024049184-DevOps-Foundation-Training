@@ -1,0 +1,5 @@
+"service","slo_pct","observed_reliability_pct","critical_findings","high_findings","medium_findings","allowed_unreliable_pct","observed_unreliable_pct","error_budget_consumed_pct","security_risk","policy"
+"Checkout",99.9,99.82,1,2,3,0.0999999999999943,0.180000000000007,180,14,"BLOCK"
+"Catalog",99.5,99.58,0,1,2,0.5,0.420000000000002,84,5,"APPROVAL"
+"Search",99,99.35,0,0,2,1,0.650000000000006,65,2,"AUTOMATE"
+"Identity",99.95,99.94,0,2,3,0.0499999999999972,0.0600000000000023,120,9,"BLOCK"

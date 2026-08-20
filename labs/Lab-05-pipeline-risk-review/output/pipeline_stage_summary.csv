@@ -1,0 +1,5 @@
+"stage","active_minutes","wait_minutes","failed","rework_minutes","executions","wait_ratio","failure_rate_pct"
+"Release",19,340,0,0,4,17.89,0
+"Security",26,235,0,0,4,9.04,0
+"Test",60,85,2,34,4,1.42,50
+"Build",32,12,1,10,4,0.38,25

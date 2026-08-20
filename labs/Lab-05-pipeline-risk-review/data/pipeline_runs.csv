@@ -1,0 +1,17 @@
+run_id,stage,active_minutes,wait_minutes,failed,rework_minutes
+R1,Build,8,3,0,0
+R1,Test,15,20,1,18
+R1,Security,6,55,0,0
+R1,Release,5,80,0,0
+R2,Build,9,4,0,0
+R2,Test,14,18,0,0
+R2,Security,7,60,0,0
+R2,Release,5,95,0,0
+R3,Build,8,3,1,10
+R3,Test,16,25,0,0
+R3,Security,6,58,0,0
+R3,Release,4,75,0,0
+R4,Build,7,2,0,0
+R4,Test,15,22,1,16
+R4,Security,7,62,0,0
+R4,Release,5,90,0,0

@@ -1,0 +1,17 @@
+dir.create("output",showWarnings=FALSE)
+d <- read.csv("data/deployments.csv",stringsAsFactors=FALSE)
+d$commit_at <- as.POSIXct(d$commit_at,tz="UTC"); d$deployed_at <- as.POSIXct(d$deployed_at,tz="UTC")
+d$lead_hours <- as.numeric(difftime(d$deployed_at,d$commit_at,units="hours"))
+total <- nrow(d); failed <- sum(d$failed==1); rework <- sum(d$rework==1)
+metrics <- data.frame(metric=c("Deployment frequency","Median change lead time","Change fail rate","Median failed deployment recovery time","Deployment rework rate"),
+ value=c(total,round(median(d$lead_hours),1),round(100*failed/total,1),round(median(d$recovery_hours[d$failed==1]),1),round(100*rework/total,1)),
+ unit=c("deployments / sample week","hours","percent","hours","percent"))
+write.csv(metrics,"output/dora_metrics.csv",row.names=FALSE)
+a <- read.csv("data/problem_actions.csv",stringsAsFactors=FALSE)
+a$due_date <- as.Date(a$due_date); a$overdue <- a$status!="Verified" & a$due_date<as.Date("2026-08-20")
+write.csv(a,"output/problem_actions.csv",row.names=FALSE)
+png("output/dora_dashboard.png",1200,700)
+barplot(metrics$value,names.arg=c("Deploy","Lead","Fail","Recover","Rework"),col="#1F6FEB",ylab="Value (see unit in CSV)",main="Delivery performance evidence — one service")
+dev.off()
+stopifnot(nrow(metrics)==5,total==12,all(nzchar(a$owner)),all(!is.na(a$due_date)))
+cat("LAB 07 PASS\n")

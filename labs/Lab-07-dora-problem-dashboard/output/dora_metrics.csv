@@ -1,0 +1,6 @@
+"metric","value","unit"
+"Deployment frequency",12,"deployments / sample week"
+"Median change lead time",8.5,"hours"
+"Change fail rate",25,"percent"
+"Median failed deployment recovery time",2.5,"hours"
+"Deployment rework rate",25,"percent"

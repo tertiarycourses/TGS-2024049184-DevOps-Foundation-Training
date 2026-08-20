@@ -1,0 +1,13 @@
+event_id,category,stage,lost_minutes,symptom
+E01,Flaky test,Test,48,Intermittent assertion failure
+E02,Dependency,Build,65,Registry timeout
+E03,Flaky test,Test,35,Timing-dependent failure
+E04,Configuration,Deploy,90,Missing environment variable
+E05,Dependency,Build,55,Package unavailable
+E06,Flaky test,Test,42,Shared test-state collision
+E07,Manual approval,Release,30,Approver unavailable
+E08,Configuration,Deploy,75,Wrong feature-flag value
+E09,Dependency,Build,45,Base image pull timeout
+E10,Flaky test,Test,38,Order-dependent failure
+E11,Manual approval,Release,25,Approval queue
+E12,Configuration,Deploy,85,Secret name mismatch

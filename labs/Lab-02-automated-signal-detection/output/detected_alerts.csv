@@ -1,0 +1,3 @@
+"timestamp","service","latency_ms","error_rate_pct","robust_z","severity","owner","action"
+2026-08-20 09:30:00,"Checkout",410,1.2,25.63,"SEV-2","Checkout on-call","Open problem record; inspect deployment and dependency timeline"
+2026-08-20 09:50:00,"Checkout",610,5.5,52.61,"SEV-1","Checkout on-call","Open problem record; inspect deployment and dependency timeline"

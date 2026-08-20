@@ -1,0 +1,4 @@
+"problem_id","control_type","recommendation","owner","due_date","verification"
+"PRB-CHECKOUT","Prevent","Pin and verify dependency versions before merge","Platform team","2026-09-05","Zero unpinned production dependencies"
+"PRB-CHECKOUT","Detect","Alert on sustained latency plus change correlation","SRE team","2026-09-08","Two consecutive windows; false positive below 5%"
+"PRB-CHECKOUT","Recover","Automate safe rollback when canary SLO is breached","Checkout team","2026-09-12","Recovery below 30 minutes in game day"

@@ -1,0 +1,7 @@
+"problem_id","problem","severity","frequency","business_impact","confidence","effort","priority_score","rank"
+"PRB-A","Checkout timeout",5,4,5,5,3,33.33,1
+"PRB-E","Manual release delay",3,5,4,5,3,20,2
+"PRB-B","Alert duplication",2,5,2,5,1,20,3
+"PRB-D","Catalog cache churn",3,4,3,4,2,14.4,4
+"PRB-F","Slow analytics report",2,4,3,4,2,9.6,5
+"PRB-C","Rare ledger mismatch",5,1,5,2,5,2,6

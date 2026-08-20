@@ -1,0 +1,5 @@
+action_id,problem_id,action,owner,due_date,status,verification
+ACT-01,PRB-A,Add dependency timeout and retry guardrail,Aisha,2026-08-15,Implemented,Monitor registry timeout rate
+ACT-02,PRB-C,Validate ledger reconciliation invariant,Chen,2026-08-25,In progress,Zero mismatch in 30-day sample
+ACT-03,PRB-E,Automate low-risk release approval,Devi,2026-08-18,Verified,Median approval queue below 10 minutes
+ACT-04,PRB-B,Deduplicate alert routing key,Farid,2026-08-12,Open,Duplicate alerts below 2 percent

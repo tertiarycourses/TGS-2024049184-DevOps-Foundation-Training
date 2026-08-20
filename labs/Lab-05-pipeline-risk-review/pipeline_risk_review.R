@@ -1,0 +1,15 @@
+dir.create("output",showWarnings=FALSE)
+d <- read.csv("data/pipeline_runs.csv",stringsAsFactors=FALSE)
+agg <- aggregate(cbind(active_minutes,wait_minutes,failed,rework_minutes)~stage,d,sum)
+count <- aggregate(run_id~stage,d,length); names(count)[2] <- "executions"
+agg <- merge(agg,count,by="stage")
+agg$wait_ratio <- round(agg$wait_minutes/pmax(agg$active_minutes,1),2)
+agg$failure_rate_pct <- round(100*agg$failed/agg$executions,1)
+agg <- agg[order(-agg$wait_ratio),]
+write.csv(agg,"output/pipeline_stage_summary.csv",row.names=FALSE)
+png("output/pipeline_flow.png",1200,700)
+mat <- rbind(agg$active_minutes,agg$wait_minutes)
+barplot(mat,beside=FALSE,names.arg=agg$stage,col=c("#10B981","#F59E0B"),las=2,ylab="Minutes",main="Pipeline active and wait time")
+legend("topright",c("Active","Wait"),fill=c("#10B981","#F59E0B"))
+dev.off()
+cat("Constraint:",agg$stage[1],"\nLAB 05 PASS\n")

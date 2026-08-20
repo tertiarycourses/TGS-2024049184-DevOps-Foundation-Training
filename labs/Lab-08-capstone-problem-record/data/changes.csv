@@ -1,0 +1,4 @@
+change_id,change_type,dependency_version,risk_score,rollback_tested
+CHG-31,Application,2.4.1,3,yes
+CHG-34,Dependency,2.5.0,5,no
+CHG-36,Dependency,2.5.1,5,no

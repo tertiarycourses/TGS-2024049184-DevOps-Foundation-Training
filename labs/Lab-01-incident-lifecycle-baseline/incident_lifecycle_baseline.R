@@ -1,0 +1,23 @@
+dir.create("output", showWarnings = FALSE)
+d <- read.csv("data/incidents.csv", stringsAsFactors = FALSE)
+required <- c("problem_id","service","status","severity","detected_at","restored_at","owner","repeat_count")
+stopifnot(all(required %in% names(d)), !anyDuplicated(d$problem_id))
+valid_status <- c("Detected","Logged","Investigating","Resolved","Learning")
+if (any(!d$status %in% valid_status)) stop("Invalid lifecycle status")
+d$detected_at <- as.POSIXct(d$detected_at, tz="UTC")
+d$restored_at <- as.POSIXct(ifelse(d$restored_at=="", NA, d$restored_at), tz="UTC")
+d$hours_to_restore <- as.numeric(difftime(d$restored_at, d$detected_at, units="hours"))
+if (any(d$hours_to_restore < 0, na.rm=TRUE)) stop("Negative duration")
+d$ageing_days <- ifelse(is.na(d$restored_at), as.numeric(difftime(as.POSIXct("2026-08-20 09:00", tz="UTC"), d$detected_at, units="days")), 0)
+summary <- aggregate(problem_id ~ status, d, length)
+names(summary)[2] <- "problem_count"
+summary$share_pct <- round(100 * summary$problem_count / nrow(d), 1)
+write.csv(summary, "output/lifecycle_summary.csv", row.names=FALSE)
+ageing <- d[is.na(d$restored_at), c("problem_id","service","status","severity","owner","repeat_count","ageing_days")]
+ageing <- ageing[order(-ageing$ageing_days), ]
+write.csv(ageing, "output/ageing_problems.csv", row.names=FALSE)
+png("output/lifecycle_status.png", 1200, 700)
+barplot(summary$problem_count, names.arg=summary$status, col="#10B981", las=2, main="Problem records by lifecycle status", ylab="Records")
+dev.off()
+stopifnot(sum(summary$problem_count)==nrow(d), nrow(ageing)>=1)
+cat("LAB 01 PASS\n")

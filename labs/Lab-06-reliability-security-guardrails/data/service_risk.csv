@@ -1,0 +1,5 @@
+service,slo_pct,observed_reliability_pct,critical_findings,high_findings,medium_findings
+Checkout,99.9,99.82,1,2,3
+Catalog,99.5,99.58,0,1,2
+Search,99.0,99.35,0,0,2
+Identity,99.95,99.94,0,2,3

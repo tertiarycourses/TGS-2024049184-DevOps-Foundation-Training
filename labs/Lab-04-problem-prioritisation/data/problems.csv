@@ -1,0 +1,7 @@
+problem_id,problem,severity,frequency,business_impact,confidence,effort
+PRB-A,Checkout timeout,5,4,5,5,3
+PRB-B,Alert duplication,2,5,2,5,1
+PRB-C,Rare ledger mismatch,5,1,5,2,5
+PRB-D,Catalog cache churn,3,4,3,4,2
+PRB-E,Manual release delay,3,5,4,5,3
+PRB-F,Slow analytics report,2,4,3,4,2
