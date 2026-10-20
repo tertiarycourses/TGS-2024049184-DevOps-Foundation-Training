@@ -8,8 +8,7 @@ service issues, recommending improvements, and monitoring measurable outcomes.
 | Course code | `TGS-2024049184` |
 | Programme | Singapore Workforce Skills Qualifications (WSQ) |
 | Duration | 2 days / 16 hours — 14 hours facilitated learning plus 2 hours assessment |
-| Registration | [View course details and register](https://www.tertiarycourses.com.sg/wsq-devops-foundation-training.html) |
-| Funding | Up to 70% WSQ funding subsidy. Eligibility and terms apply; see the registration page for current details. |
+| Registration | [View the course on MySkillsFuture](https://courses.myskillsfuture.gov.sg/courses/TGS-2024049184) |
 | Courseware version | v4.0 · 20 August 2026 |
 
 ## About the course
@@ -60,7 +59,7 @@ Assessment instruments, answer keys, source references, credentials and build to
 
 ## Registration and course information
 
-- [DevOps Foundation Training — course details and registration](https://www.tertiarycourses.com.sg/wsq-devops-foundation-training.html)
+- [DevOps Foundation Training on MySkillsFuture](https://courses.myskillsfuture.gov.sg/courses/TGS-2024049184)
 - [LMS-TMS](https://lms-tms.tertiaryinfotech.com/)
 
 © 2026 Tertiary Infotech Academy Pte Ltd. All rights reserved.
